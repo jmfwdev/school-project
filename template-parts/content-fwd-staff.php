@@ -11,23 +11,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		
-		<?php
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				school_theme_posted_on();
-				school_theme_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php school_theme_post_thumbnail(); ?>
 
 	<div class="entry-content">
-	<?php
+		<?php
+		the_content();
 		//content
 		$args_administrative = array(
 			'post_type'      => 'fwd-staff',
