@@ -175,4 +175,25 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+/**
+* Custom Post Types & Taxonomies
+*/
+require get_template_directory() . '/inc/cpt-taxonomy.php';
+
+
+/**
+* Add filter
+*/
+
+function fwd_title_place_holder($title){
+	
+	if( post_type_exists( 'fwd-staff' ) ){
+		$my_title = "Add staff name";
+		return $my_title;
+	}
+	
+	return $title;
+	
+}
+add_filter('enter_title_here', 'fwd_title_place_holder');
 
