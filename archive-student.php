@@ -24,7 +24,7 @@ get_header();
 					<?php the_post_thumbnail('thumbnail'); ?>
 				</div>
 				<div class="taxonomy">
-					<?php echo get_the_term_list(get_the_ID(), 'student_category', 'Category: ', ', '); ?>
+					<?php echo get_the_term_list(get_the_ID(), 'student_category', 'Specialty: ', ', '); ?>
 				</div>
 			</div>
 	<?php
