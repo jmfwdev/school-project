@@ -181,45 +181,47 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 /**
-* Custom Post Types & Taxonomies
-*/
+ * Custom Post Types & Taxonomies
+ */
 require get_template_directory() . '/inc/cpt-taxonomy.php';
 
 
 /**
-* Add filter
-*/
+ * Add filter
+ */
 
 // function fwd_title_place_holder($title){
-	
+
 // 	if( post_type_exists( 'fwd-staff' ) ){
 // 		$my_title = "Add staff name";
 // 		return $my_title;
 // 	}
-	
+
 // 	return $title;
-	
+
 // }
 
 // add_filter('enter_title_here', 'fwd_title_place_holder');
 
-function fwd_title_place_holder( $placeholder ) {
-    // Check if we are on the admin post edit screen and the post type is 'your_custom_post_type'
-	if( post_type_exists( 'fwd-staff' ) ){
+function fwd_title_place_holder($placeholder)
+{
+	// Check if we are on the admin post edit screen and the post type is 'your_custom_post_type'
+	if (post_type_exists('fwd-staff')) {
 		$my_title = "Add staff name";
 		return $my_title;
 	}
-	return $title;
+	return $my_title;
 }
 
-function apply_custom_title_placeholder() {
-    global $post_type;
-    if ( 'fwd-staff' === $post_type ) {
-        add_filter( 'enter_title_here', 'fwd_title_place_holder' );
-    }
+function apply_custom_title_placeholder()
+{
+	global $post_type;
+	if ('fwd-staff' === $post_type) {
+		add_filter('enter_title_here', 'fwd_title_place_holder');
+	}
 }
-add_action( 'admin_head-post-new.php', 'apply_custom_title_placeholder' );
-add_action( 'admin_head-post.php', 'apply_custom_title_placeholder' );
+add_action('admin_head-post-new.php', 'apply_custom_title_placeholder');
+add_action('admin_head-post.php', 'apply_custom_title_placeholder');
 
 /**
  * Custom Post Types
