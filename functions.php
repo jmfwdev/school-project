@@ -187,72 +187,99 @@ if (defined('JETPACK__VERSION')) {
 
 // Students Post Type
 
-function register_student_post_type()
+function register_student_cpt()
 {
 	$labels = array(
-		'name'                  => _x('Students', 'Post Type General Name', 'school-theme'),
-		'singular_name'         => _x('Student', 'Post Type Singular Name', 'school-theme'),
-		'menu_name'             => __('Students', 'school-theme'),
-		'name_admin_bar'        => __('Student', 'school-theme'),
-		'archives'              => __('Student Archives', 'school-theme'),
-		'attributes'            => __('Student Attributes', 'school-theme'),
-		'parent_item_colon'     => __('Parent Student:', 'school-theme'),
-		'all_items'             => __('All Students', 'school-theme'),
-		'add_new_item'          => __('Add New Student', 'school-theme'),
-		'add_new'               => __('Add New', 'school-theme'),
-		'new_item'              => __('New Student', 'school-theme'),
-		'edit_item'             => __('Edit Student', 'school-theme'),
-		'update_item'           => __('Update Student', 'school-theme'),
-		'view_item'             => __('View Student', 'school-theme'),
-		'view_items'            => __('View Students', 'school-theme'),
-		'search_items'          => __('Search Student', 'school-theme'),
-		'not_found'             => __('Not found', 'school-theme'),
-		'not_found_in_trash'    => __('Not found in Trash', 'school-theme'),
-		'featured_image'        => __('Featured Image', 'school-theme'),
-		'set_featured_image'    => __('Set featured image', 'school-theme'),
-		'remove_featured_image' => __('Remove featured image', 'school-theme'),
-		'use_featured_image'    => __('Use as featured image', 'school-theme'),
-		'insert_into_item'      => __('Insert into student', 'school-theme'),
-		'uploaded_to_this_item' => __('Uploaded to this student', 'school-theme'),
-		'items_list'            => __('Students list', 'school-theme'),
-		'items_list_navigation' => __('Students list navigation', 'school-theme'),
-		'filter_items_list'     => __('Filter students list', 'school-theme'),
+		'name'                  => _x('Students', 'Post type general name', 'textdomain'),
+		'singular_name'         => _x('Student', 'Post type singular name', 'textdomain'),
+		'menu_name'             => _x('Students', 'Admin Menu text', 'textdomain'),
+		'name_admin_bar'        => _x('Student', 'Add New on Toolbar', 'textdomain'),
+		'add_new'               => __('Add New', 'textdomain'),
+		'add_new_item'          => __('Add New Student', 'textdomain'),
+		'new_item'              => __('New Student', 'textdomain'),
+		'edit_item'             => __('Edit Student', 'textdomain'),
+		'view_item'             => __('View Student', 'textdomain'),
+		'all_items'             => __('All Students', 'textdomain'),
+		'search_items'          => __('Search Students', 'textdomain'),
+		'not_found'             => __('No students found.', 'textdomain'),
 	);
+
 	$args = array(
-		'label'                 => __('Student', 'school-theme'),
-		'description'           => __('Post Type Description', 'school-theme'),
-		'labels'                => $labels,
-		'supports'              => array('title', 'editor', 'thumbnail', 'custom-fields'),
-		'taxonomies'            => array('category', 'post_tag'),
-		'hierarchical'          => false,
-		'public'                => true,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'show_in_admin_bar'     => true,
-		'show_in_nav_menus'     => true,
-		'can_export'            => true,
-		'has_archive'           => true,
-		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
-		'capability_type'       => 'post',
-		'menu_icon'             => 'dashicons-welcome-learn-more',
-		'rewrite'               => array('slug' => 'student'),
-		'template'              => array(
+		'labels'             => $labels,
+		'public'             => true,
+		'has_archive'        => true,
+		'show_in_rest'       => true, // Enable Gutenberg block editor
+		'supports'           => array('title', 'editor', 'excerpt', 'thumbnail'),
+		'template'           => array(
 			array('core/paragraph', array(
-				'placeholder' => 'Add student name',
-			)),
-			array('core/paragraph', array(
-				'placeholder' => 'Add short biography',
+				'placeholder' => 'Add a short biography',
 			)),
 			array('core/button', array(
-				'text' => 'Portfolio',
-				'url'  => '#',
+				'text' => 'Visit Portfolio',
 			)),
 		),
-		'template_lock'         => 'all',
+		'template_lock'      => 'all', // Prevent adding/removing/moving blocks
+		'rewrite'            => array('slug' => 'students'),
+		'menu_icon'          => 'dashicons-welcome-learn-more',
 	);
+
 	register_post_type('student', $args);
 }
+add_action('init', 'register_student_cpt');
 
-add_action('init', 'register_student_post_type', 0);
+
+function change_student_title_placeholder($title)
+{
+	$screen = get_current_screen();
+	if ('student' == $screen->post_type) {
+		$title = 'Add student name';
+	}
+	return $title;
+}
+add_filter('enter_title_here', 'change_student_title_placeholder');
+
+function student_excerpt_length($length)
+{
+	if (is_post_type_archive('student')) {
+		return 25;
+	}
+	return $length;
+}
+add_filter('excerpt_length', 'student_excerpt_length');
+
+function student_excerpt_more($more)
+{
+	global $post;
+	if (is_post_type_archive('student')) {
+		return '... <a href="' . get_permalink($post->ID) . '">Read More about the Student</a>';
+	}
+	return $more;
+}
+add_filter('excerpt_more', 'student_excerpt_more');
+
+function register_student_taxonomy()
+{
+	$labels = array(
+		'name'              => _x('Categories', 'taxonomy general name'),
+		'singular_name'     => _x('Category', 'taxonomy singular name'),
+	);
+
+	$args = array(
+		'labels'            => $labels,
+		'public'            => true,
+		'hierarchical'      => true,
+		'show_in_rest'      => true, // For Gutenberg
+	);
+
+	register_taxonomy('student_category', array('student'), $args);
+}
+add_action('init', 'register_student_taxonomy');
+
+function add_student_categories()
+{
+	wp_insert_term('Designer', 'student_category');
+	wp_insert_term('Developer', 'student_category');
+}
+add_action('init', 'add_student_categories');
+
+add_image_size('student-thumbnail', 200, 300, true);
