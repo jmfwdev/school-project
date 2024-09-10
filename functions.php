@@ -210,7 +210,7 @@ function fwd_title_place_holder($placeholder)
 		$my_title = "Add staff name";
 		return $my_title;
 	}
-	return $my_title;
+	// return $my_title;
 }
 
 function apply_custom_title_placeholder()
@@ -325,3 +325,5 @@ function add_student_categories()
 add_action('init', 'add_student_categories');
 
 add_image_size('student-thumbnail', 200, 300, true);
+
+// Enqueue Javascript Animations
