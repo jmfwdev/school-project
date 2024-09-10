@@ -35,7 +35,7 @@ get_header();
 
 					$schedule_date = $schedule_item['date'];
 					$schedule_course = $schedule_item['course'];
-					$schedule_instructor = $schedule_item['instructor'];
+					$schedule_instructor = $schedule_item['instructors'];
 
 					echo '<table class="schedule-table">';
 					echo '<thead>';
