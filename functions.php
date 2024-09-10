@@ -328,21 +328,19 @@ add_image_size('student-thumbnail', 200, 300, true);
 
 // // Enqueue Javascript Animations for Posts only
 
-// function enqueue_animation_script()
-// {
-// 	wp_enqueue_script('animation-script', get_template_directory_uri() . '/animation/src/js/aos.js', array('jquery'), _S_VERSION, true);
-// }
-// add_action('wp_enqueue_scripts', 'enqueue_animation_script');
+function enqueue_student_animations()
+{
+	wp_enqueue_script('student-animation', get_template_directory_uri() . '/js/aos.js', array(), _S_VERSION, true);
+}
 
-// function enqueue_animation_style()
-// {
-// 	wp_enqueue_style('animation-style', get_template_directory_uri() . '/animation/src/sass/aos.scss', array(), _S_VERSION);
-// 	// _animations.scss import 
-// 	wp_enqueue_style('animation-scss', get_template_directory_uri() . '/animation/src/sass/_animations.scss', array(), _S_VERSION);
-// 	// import _core.scss 
-// 	wp_enqueue_style('core-scss', get_template_directory_uri() . '/animation/src/sass/_core.scss', array(), _S_VERSION);
-// 	//import _easing.scss 
-// 	wp_enqueue_style('easing-scss', get_template_directory_uri() . '/animation/src/sass/_easing.scss', array(), _S_VERSION);
-// }
+add_action('wp_enqueue_scripts', 'enqueue_student_animations');
 
-// add_action('wp_enqueue_style', 'enqueue_animation_style');
+// aos.css 
+
+function enqueue_student_styles()
+{
+
+	wp_enqueue_style('student-styles', get_template_directory_uri() . '/css/aos.css', array(), _S_VERSION);
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_student_styles');
