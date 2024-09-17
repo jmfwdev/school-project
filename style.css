@@ -659,6 +659,7 @@ textarea {
 	justify-content: space-between;
 	align-items: center;
 	position: absolute;
+	background-color: #f1f1f1;
 }
 
 .main-navigation {
@@ -675,7 +676,6 @@ textarea {
 	margin: 0;
 	padding-left: 0;
 	height: 0;
-	transition: all 0.5s ease;
 }
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -729,8 +729,20 @@ textarea {
 	}
 	.main-navigation ul {
 		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		align-items: center;
+		height: auto;
+		position: relative;
 	}
 }
+.menu-menu-1-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {

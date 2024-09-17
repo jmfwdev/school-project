@@ -28,6 +28,7 @@
   justify-content: space-between;
   align-items: center;
   position: absolute;
+  background-color: $color__background-screen;
 }
 
 .main-navigation {
@@ -43,7 +44,6 @@
     margin: 0;
     padding-left: 0;
     height: 0;
-    transition: all 0.5s ease;
 
     ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -128,7 +128,19 @@
 
   .main-navigation ul {
     display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    height: auto;
+    position: relative;
   }
+}
+
+.menu-menu-1-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .comment-navigation,
