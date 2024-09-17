@@ -394,6 +394,10 @@ textarea {
 	line-height: 1.5;
 }
 
+body {
+	font-family: "Barlow", sans-serif;
+}
+
 h1,
 h2,
 h3,
