@@ -52,6 +52,7 @@ function school_theme_setup()
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__('Primary', 'school-theme'),
+			'footer' => esc_html__('Footer', 'school-theme'),
 		)
 	);
 

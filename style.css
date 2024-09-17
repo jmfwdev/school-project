@@ -741,6 +741,9 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
+.page-id-85 {
+	margin: 0;
+}
 .page-id-85 .post-85 {
 	display: grid;
 	grid-template-columns: auto;
@@ -878,6 +881,33 @@ textarea {
 
 .gallery-caption {
 	display: block;
+}
+
+/* Footer
+--------------------------------------------- */
+.site-footer {
+	background-color: rgb(229, 226, 226);
+	text-align: center;
+	padding: 1rem 0;
+}
+.site-footer .menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.site-footer .menu a {
+	color: #cc0633;
+}
+.site-footer .site-info,
+.site-footer .site-credits,
+.site-footer .menu {
+	margin: 1rem auto;
+}
+.site-footer .site-info a,
+.site-footer .site-credits a,
+.site-footer .menu a {
+	text-decoration: none;
+	font-weight: bold;
 }
 
 /*--------------------------------------------------------------

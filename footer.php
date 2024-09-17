@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,24 +12,39 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'school-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'school-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'school-theme' ), 'school-theme', '<a href="http://www.marcsapa.com/school">JM</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+	<div class="site-credits">
+		<h2>CREDITS</h2>
+		<p>Created by:
+			<a href="https://marcsapa.com/">Marc Sapa</a>
+			&
+			<a href="#">JM Hore</a>
+		</p>
+	</div>
+	<nav id="footer-navigation" class="footer-navigation">
+		<h2>LINKS</h2>
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'footer',
+				'menu-id' => 'footer-menu',
+			)
+		);
+		?>
+	</nav>
+	<div class="site-info">
+		<a href="<?php echo esc_url(__('https://wordpress.org/', 'school-theme')); ?>">
+			<?php
+			/* translators: %s: CMS name, i.e. WordPress. */
+			printf(esc_html__('Proudly powered by %s', 'school-theme'), 'WordPress');
+			?>
+		</a>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
