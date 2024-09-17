@@ -1,12 +1,13 @@
 #masthead {
   display: flex;
-  justify-content: space-between;
-  gap: 1.5em;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #a6182e;
 }
 
 .main-navigation {
   display: block;
-  width: 100%;
+  width: auto;
 
   ul {
     display: none;
