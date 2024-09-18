@@ -869,56 +869,70 @@ textarea {
 	max-width: 33%;
 }
 
-.schedule-table {
+.page-id-73 h1 {
+	text-align: center;
+}
+.page-id-73 .post-73 {
+	margin: 5rem auto;
+}
+.page-id-73 .post-73 .entry-content {
+	margin: 1rem;
+}
+.page-id-73 .post-73 .entry-content p {
+	max-width: 31.25rem;
+	text-align: center;
+	margin: 0 auto;
+}
+.page-id-73 .schedule-table {
 	font-weight: bold;
 	border-collapse: collapse;
 	max-width: 62.5rem;
 	margin: 0 auto 8rem;
 }
-.schedule-table caption {
+.page-id-73 .schedule-table caption {
 	padding: 1rem;
 	font-size: 1.25rem;
 }
-.schedule-table thead {
+.page-id-73 .schedule-table thead {
 	background-color: #eee;
 }
-.schedule-table tbody tr:nth-of-type(odd) {
+.page-id-73 .schedule-table tbody tr:nth-of-type(odd) {
 	background-color: #a00529;
 	color: white;
 }
-.schedule-table tbody tr:nth-of-type(even) {
+.page-id-73 .schedule-table tbody tr:nth-of-type(even) {
 	background-color: #eee;
 }
-.schedule-table tr {
+.page-id-73 .schedule-table tr {
 	display: grid;
 	padding: 2rem;
 	grid-template-columns: auto;
 	grid-template-areas: "date date" "course instructor";
 	text-align: center;
 }
-.schedule-table tr :nth-child(1) {
+.page-id-73 .schedule-table tr :nth-child(1) {
 	grid-area: date;
 }
-.schedule-table tr :nth-child(2) {
+.page-id-73 .schedule-table tr :nth-child(2) {
 	grid-area: course;
 }
-.schedule-table tr :nth-child(3) {
+.page-id-73 .schedule-table tr :nth-child(3) {
 	grid-area: instructor;
 }
-.schedule-table td {
+.page-id-73 .schedule-table td {
 	display: block;
 	padding: 1rem;
 }
-.schedule-table th {
+.page-id-73 .schedule-table th {
 	display: block;
 	padding: 1rem;
 }
 @media (min-width: 40.625em) {
-	.schedule-table tr {
+	.page-id-73 .schedule-table tr {
 		display: table-row;
 	}
-	.schedule-table th,
-	.schedule-table td {
+	.page-id-73 .schedule-table th,
+	.page-id-73 .schedule-table td {
 		display: table-cell;
 		padding: 2rem;
 	}
@@ -1031,6 +1045,45 @@ textarea {
 		left: 3rem;
 		width: 20rem;
 		color: black;
+	}
+}
+
+.page-id-63 h1,
+.page-id-63 h2,
+.page-id-63 h3 {
+	text-align: center;
+}
+.page-id-63 .entry-header {
+	margin-top: 5rem;
+}
+.page-id-63 .entry-content {
+	margin: 1rem;
+}
+.page-id-63 .entry-content p {
+	max-width: 43.75rem;
+	margin: 0 auto;
+}
+.page-id-63 .entry-content section {
+	margin: 3rem 1rem 5rem;
+}
+.page-id-63 .entry-content section p {
+	max-width: 31.25rem;
+}
+.page-id-63 .entry-content section h2:nth-child(1) {
+	font-size: 30px;
+}
+@media (min-width: 59.375rem) {
+	.page-id-63 section .tax-div {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.page-id-63 section .tax-div p {
+		margin: 1rem 0;
+	}
+	.page-id-63 section .tax-div p a {
+		text-decoration: none;
+		font-weight: bold;
+		color: #cc0633;
 	}
 }
 
