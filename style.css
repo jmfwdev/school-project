@@ -882,6 +882,10 @@ textarea {
 	display: block;
 	margin: 0.5rem auto;
 }
+.page-id-85 .post-85 .entry-content .wp-block-columns {
+	max-width: 65rem;
+	margin: 0 auto;
+}
 .page-id-85 .post-85 .entry-content .wp-block-columns p {
 	background-color: white;
 	font-size: large;
@@ -1057,12 +1061,12 @@ textarea {
 	text-align: center;
 	padding: 1rem 0;
 }
-.site-footer .menu {
+.site-footer .menu ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-.site-footer .menu a {
+.site-footer .menu ul a {
 	color: #cc0633;
 }
 .site-footer .site-info,
