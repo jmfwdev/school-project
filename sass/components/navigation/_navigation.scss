@@ -5,6 +5,18 @@
   position: relative;
 }
 
+.site-title .custom-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 3rem;
+  fill: #fff;
+}
+
+.desktop-title {
+  display: none;
+}
+
 .site-title {
   margin: 0;
   padding: 1rem;
@@ -134,6 +146,10 @@
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
+  }
+
+  .desktop-title {
+    display: block;
   }
 
   .main-navigation ul {
