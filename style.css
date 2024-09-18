@@ -816,28 +816,58 @@ textarea {
 }
 
 .schedule-table {
-	display: flex;
-	justify-content: center;
+	font-weight: bold;
+	border-collapse: collapse;
+	max-width: 62.5rem;
+	margin: 0 auto 8rem;
+}
+.schedule-table caption {
 	padding: 1rem;
+	font-size: 1.25rem;
 }
 .schedule-table thead {
-	width: 100%;
+	background-color: #eee;
 }
-.schedule-table thead tr {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	width: 100%;
+.schedule-table tbody tr:nth-of-type(odd) {
+	background-color: #a00529;
+	color: white;
 }
-.schedule-table thead tr td {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.schedule-table tbody tr:nth-of-type(even) {
+	background-color: #eee;
+}
+.schedule-table tr {
+	display: grid;
+	padding: 2rem;
+	grid-template-columns: auto;
+	grid-template-areas: "date date" "course instructor";
 	text-align: center;
-	width: 33%;
-	height: 5rem;
-	padding: 0 1rem;
-	border: 1px solid #000;
+}
+.schedule-table tr :nth-child(1) {
+	grid-area: date;
+}
+.schedule-table tr :nth-child(2) {
+	grid-area: course;
+}
+.schedule-table tr :nth-child(3) {
+	grid-area: instructor;
+}
+.schedule-table td {
+	display: block;
+	padding: 1rem;
+}
+.schedule-table th {
+	display: block;
+	padding: 1rem;
+}
+@media (min-width: 40.625em) {
+	.schedule-table tr {
+		display: table-row;
+	}
+	.schedule-table th,
+	.schedule-table td {
+		display: table-cell;
+		padding: 2rem;
+	}
 }
 
 .page-id-85 {

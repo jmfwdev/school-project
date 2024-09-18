@@ -41,29 +41,75 @@
 // Schedule
 
 .schedule-table {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  thead {
-    width: 100%;
-    tr {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      width: 100%;
+	font-weight: bold;
+	border-collapse: collapse;
+	max-width: 62.5rem;
+	margin: 0 auto 8rem;
 
-      td {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 33%;
-        height: 5rem;
-        padding: 0 1rem;
-        border: 1px solid #000;
-      }
-    }
+
+	caption {
+		padding: 1rem;
+		font-size: 1.25rem;
+	}
+
+	thead {
+		background-color: #eee;
+	}
+
+	tbody tr:nth-of-type(odd) {
+	background-color:  #a00529;
+	color: white;
+	}
+
+	tbody tr:nth-of-type(even) {
+		background-color: #eee;
+		}
+
+	tr {
+		display: grid;
+		padding: 2rem;
+		grid-template-columns: auto;
+		grid-template-areas: 
+			"date date"
+			"course instructor";
+
+		text-align: center;
+	}
+
+  tr :nth-child(1) {
+	grid-area: date;
   }
+
+  tr :nth-child(2) {
+	grid-area: course;
+  }
+
+  tr :nth-child(3) {
+	grid-area: instructor;
+  }
+
+  td {
+	display: block;
+	padding: 1rem;
+  }
+
+  th {
+  	display: block;
+	padding: 1rem;
+}
+
+	@media (min-width: 40.625em) {
+
+		tr {
+			display: table-row;
+		}
+
+		th,
+		td {
+			display: table-cell;
+			padding: 2rem;
+		}
+	}
 }
 
 
