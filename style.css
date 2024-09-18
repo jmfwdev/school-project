@@ -925,6 +925,31 @@ textarea {
 	}
 }
 
+.schedule-table {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+}
+.schedule-table thead {
+	width: 100%;
+}
+.schedule-table thead tr {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+}
+.schedule-table thead tr td {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 33%;
+	height: 5rem;
+	padding: 0 1rem;
+	border: 1px solid #000;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {

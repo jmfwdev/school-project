@@ -22,6 +22,8 @@
   margin: 0 0 1.5em;
 }
 
+// Students List
+
 .student-list {
   display: flex;
   flex-wrap: wrap;
@@ -182,3 +184,31 @@
 }
 
 // **** //
+
+// Schedule
+
+.schedule-table {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  thead {
+    width: 100%;
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+
+      td {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 33%;
+        height: 5rem;
+        padding: 0 1rem;
+        border: 1px solid #000;
+      }
+    }
+  }
+}
