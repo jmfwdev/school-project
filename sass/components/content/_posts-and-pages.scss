@@ -78,7 +78,8 @@
 			}
 
 			.wp-block-columns {
-				// background-color: #cc0633;
+				max-width: 65rem;
+				margin: 0 auto;
 
 				p {
 					background-color: white;
