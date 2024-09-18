@@ -3,6 +3,11 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  .site-branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .site-title .custom-logo {
@@ -150,6 +155,13 @@
 
   .desktop-title {
     display: block;
+    padding: 0 1rem;
+    font-size: 1.5em;
+    color: rgb(62, 62, 62);
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 
   .main-navigation ul {

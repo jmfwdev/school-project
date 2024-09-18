@@ -639,6 +639,11 @@ textarea {
 	align-items: center;
 	position: relative;
 }
+#masthead .site-branding {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 .site-title .custom-logo {
 	display: block;
@@ -750,6 +755,13 @@ textarea {
 	}
 	.desktop-title {
 		display: block;
+		padding: 0 1rem;
+		font-size: 1.5em;
+		color: rgb(62, 62, 62);
+	}
+	.desktop-title a {
+		text-decoration: none;
+		color: inherit;
 	}
 	.main-navigation ul {
 		display: flex;
