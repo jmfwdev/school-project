@@ -40,6 +40,30 @@
 
 // Schedule
 
+.page-id-73 {
+
+	h1 {
+		text-align: center;
+	}
+	.post-73 {
+
+		margin: 5rem auto;
+
+		.entry-content {
+
+			margin: 1rem;
+
+			p {
+				max-width: 31.25rem;
+				text-align: center;
+				margin: 0 auto;
+			}
+		}
+		
+	}
+		
+
+
 .schedule-table {
   font-weight: bold;
   border-collapse: collapse;
@@ -93,21 +117,24 @@
   }
 
   th {
-    display: block;
-    padding: 1rem;
-  }
+  	display: block;
+	padding: 1rem;
+}
 
-  @media (min-width: 40.625em) {
-    tr {
-      display: table-row;
-    }
 
-    th,
-    td {
-      display: table-cell;
-      padding: 2rem;
-    }
-  }
+@media (min-width: 40.625em) {
+	
+	tr {
+		display: table-row;
+	}
+	
+	th,
+	td {
+		display: table-cell;
+		padding: 2rem;
+	}
+}
+}
 }
 
 // homepage **** //
@@ -250,6 +277,61 @@
       color: black;
     }
   }
+}
+
+// staff page
+
+.page-id-63 {
+	h1,
+	h2,
+	h3 {
+		text-align: center;
+	}
+
+	.entry-header {
+		margin-top: 5rem;
+	}
+
+	.entry-content {
+
+		margin: 1rem;
+
+		p {
+			max-width: 43.75rem;
+			margin: 0 auto;
+		}
+
+		section {
+			margin: 3rem 1rem 5rem;
+			p {
+				max-width: 31.25rem;
+			}
+		}
+
+		section h2:nth-child(1) {
+			font-size: 30px;
+		}
+	}
+
+	@media (min-width: 59.375rem) {
+		section {
+
+			.tax-div {
+				display: flex;
+				justify-content: space-evenly;
+
+				p {
+					margin: 1rem 0;
+					a {
+						text-decoration: none;
+						font-weight: bold;
+						color: #cc0633;
+					}
+				}
+
+			}
+		}
+	}
 }
 
 // **** //
