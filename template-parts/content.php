@@ -12,9 +12,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div ata-aos="fade-up"
-		data-aos-offset="200"
+		data-aos-offset="50"
 		data-aos-delay="50"
-		data-aos-duration="1000"
+		data-aos-duration="500"
 		data-aos-easing="ease-in-out"
 		data-aos-mirror="true"
 		data-aos-once="false"
