@@ -8,7 +8,7 @@ get_header();
 ?>
 <main id="primary" class="site-main">
 	<header>
-		<h1 class="page-title">News</h1>
+		<h1 id="news-title" class="page-title">News</h1>
 	</header>
 	<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>

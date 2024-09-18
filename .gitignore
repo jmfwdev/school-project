@@ -97,3 +97,6 @@ package-lock.json
 
 style.css.map
 style.css
+.DS_Store
+.DS_Store
+sass/.DS_Store

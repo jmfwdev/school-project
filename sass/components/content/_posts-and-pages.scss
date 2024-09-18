@@ -65,56 +65,55 @@
 
 
 .schedule-table {
-	font-weight: bold;
-	border-collapse: collapse;
-	max-width: 62.5rem;
-	margin: 0 auto 8rem;
+  font-weight: bold;
+  border-collapse: collapse;
+  max-width: 62.5rem;
+  margin: 0 auto 8rem;
 
+  caption {
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
 
-	caption {
-		padding: 1rem;
-		font-size: 1.25rem;
-	}
+  thead {
+    background-color: #eee;
+  }
 
-	thead {
-		background-color: #eee;
-	}
+  tbody tr:nth-of-type(odd) {
+    background-color: #a00529;
+    color: white;
+  }
 
-	tbody tr:nth-of-type(odd) {
-	background-color:  #a00529;
-	color: white;
-	}
+  tbody tr:nth-of-type(even) {
+    background-color: #eee;
+  }
 
-	tbody tr:nth-of-type(even) {
-		background-color: #eee;
-		}
+  tr {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "date date"
+      "course instructor";
 
-	tr {
-		display: grid;
-		padding: 2rem;
-		grid-template-columns: auto;
-		grid-template-areas: 
-			"date date"
-			"course instructor";
-
-		text-align: center;
-	}
+    text-align: center;
+  }
 
   tr :nth-child(1) {
-	grid-area: date;
+    grid-area: date;
   }
 
   tr :nth-child(2) {
-	grid-area: course;
+    grid-area: course;
   }
 
   tr :nth-child(3) {
-	grid-area: instructor;
+    grid-area: instructor;
   }
 
   td {
-	display: block;
-	padding: 1rem;
+    display: block;
+    padding: 1rem;
   }
 
   th {
@@ -138,149 +137,146 @@
 }
 }
 
-
 // homepage **** //
 
 .page-id-85 {
-	margin: 0;
-	.post-85 {
-		display: grid;
-		grid-template-columns: auto;
-		grid-template-areas: 
-				"thumbnail"
-				"header"
-				"content"
-				"footer";
-	
-		.entry-header {
-			grid-area: header;
-		}
-	
-		.post-thumbnail {
-			grid-area: thumbnail;
-			img {
-				display: block;
-			}
-		}
-	
-	
-		.entry-content p:nth-child(1) {
-			margin: 0;
-			background-color: #cc0633;
-			color: white;
-			padding: 0 1rem 1rem;
-		}
-	
-		.entry-content p:nth-child(2) {
-			margin: 1rem auto;
-			padding: 1rem;
-			background-color: rgba(231, 231, 231, 0.500);
-			max-width: 62.5rem;
-		}
+  margin: 0;
 
-		.entry-content :nth-child(5) {
-			padding: 1rem;
-			margin: 0.5rem auto;
-			max-width: 62.5rem;
-		}
+  .post-85 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "thumbnail"
+      "header"
+      "content"
+      "footer";
 
-		.entry-content {
-			grid-area: content;
-			margin: 0;
+    .entry-header {
+      grid-area: header;
+    }
 
-			.wp-block-image img{
-				display: block;
-				margin: 0.5rem auto;
-			}
+    .post-thumbnail {
+      grid-area: thumbnail;
+      img {
+        display: block;
+      }
+    }
 
-			.wp-block-columns {
-				max-width: 65rem;
-				margin: 0 auto;
+    .entry-content p:nth-child(1) {
+      margin: 0;
+      background-color: #cc0633;
+      color: white;
+      padding: 0 1rem 1rem;
+    }
 
-				p {
-					background-color: white;
-					font-size: large;
-				}
-			}
-		}
-	
-		.entry-footer {
-			grid-area: footer;
-		}
-	}
+    .entry-content p:nth-child(2) {
+      margin: 1rem auto;
+      padding: 1rem;
+      background-color: rgba(231, 231, 231, 0.5);
+      max-width: 62.5rem;
+    }
 
-	.home-blog {
+    .entry-content :nth-child(5) {
+      padding: 1rem;
+      margin: 0.5rem auto;
+      max-width: 62.5rem;
+    }
 
-		h2 {
-			text-align: center;
-			font-size: 35px;
-		}
+    .entry-content {
+      grid-area: content;
+      margin: 0;
 
-		.latest-blog {
+      .wp-block-image img {
+        display: block;
+        margin: 0.5rem auto;
+      }
 
-			article {
-				margin: 2rem;
-				border: 1px solid #e6e7e8;
+      .wp-block-columns {
+        max-width: 65rem;
+        margin: 0 auto;
 
-				a {
-					text-decoration: none;
-				}
+        p {
+          background-color: white;
+          font-size: large;
+        }
+      }
+    }
 
-				h3 {
-					font-size: 25px;
-					padding: 0 0.75rem 0;
-					color: rgb(78, 78, 78);
-					margin-top: 0;
-				}
+    .entry-footer {
+      grid-area: footer;
+    }
+  }
 
-				p {
-					font-size: 10px;
-					width: 100%;
-					font-weight: bold;
-					color: #cc0633;
-					margin: 0 1rem 1rem;
-				}
-			}
-		}
-	}
+  .home-blog {
+    h2 {
+      text-align: center;
+      font-size: 35px;
+    }
 
-	@media (min-width: 48.75em) {
-		.latest-blog {
-			display: flex;
-		}
-	}
+    .latest-blog {
+      article {
+        margin: 2rem;
+        border: 1px solid #e6e7e8;
 
-	@media (min-width: 56.25em) {
-		.post-85 {
-			display: flex;
-			flex-direction: column;
-		}
+        a {
+          text-decoration: none;
+        }
 
-		.entry-header {
-			position: absolute;
-			z-index: 1;
-			top: 26rem;
+        h3 {
+          font-size: 25px;
+          padding: 0 0.75rem 0;
+          color: rgb(78, 78, 78);
+          margin-top: 0;
+        }
 
-			h1 {
-				font-weight: bolder;
-			}
-		}
+        p {
+          font-size: 10px;
+          width: 100%;
+          font-weight: bold;
+          color: #cc0633;
+          margin: 0 1rem 1rem;
+        }
+      }
+    }
+  }
 
-		.post-thumbnail {
-			position: relative;
-		}
+  @media (min-width: 48.75em) {
+    .latest-blog {
+      display: flex;
+    }
+  }
 
-		.post-85 .entry-content p:nth-child(1) {
-			margin: 0;
-			background-color: white;
-			padding: 1rem;
-			position: absolute;
-			top: 33rem;
-			left: 3rem;
-			width: 20rem;
-			color: black;
-		}
-	}
+  @media (min-width: 56.25em) {
+    .post-85 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .entry-header {
+      position: absolute;
+      z-index: 1;
+      top: 26rem;
+
+      h1 {
+        font-weight: bolder;
+      }
+    }
+
+    .post-thumbnail {
+      position: relative;
+    }
+
+    .post-85 .entry-content p:nth-child(1) {
+      margin: 0;
+      background-color: white;
+      padding: 1rem;
+      position: absolute;
+      top: 33rem;
+      left: 3rem;
+      width: 20rem;
+      color: black;
+    }
+  }
 }
 
 // staff page
@@ -338,8 +334,36 @@
 	}
 }
 
+// **** //
 
+// News Page
 
+#news-title {
+  text-align: center;
+}
 
+.aos-init {
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 2rem;
 
+  .entry-header {
+    h2 {
+      margin: 0 0 1.5em;
+      a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 1.5rem;
+        text-align: left;
+      }
+    }
 
+    .entry-meta {
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #cc0633;
+      }
+    }
+  }
+}
