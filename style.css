@@ -394,9 +394,8 @@ textarea {
 	line-height: 1.5;
 }
 
-body {
-	font-family: "Barlow Condensed";
-	font-style: normal;
+h2 {
+	font-family: "Playfair Display", serif;
 }
 
 h1,
@@ -637,7 +636,14 @@ textarea {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	align-content: center;
 	position: relative;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#masthead .site-branding {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .site-title .custom-logo {
@@ -672,27 +678,31 @@ textarea {
 	justify-content: space-between;
 	align-items: center;
 	position: absolute;
-	background-color: #f1f1f1;
+	left: 0;
+	width: 100%;
+	background-color: #a6182e;
+	top: 100%;
 }
 
 .main-navigation {
 	display: block;
 	width: auto;
-	position: absolute;
 	padding-right: 1rem;
 	top: 1.5rem;
 	right: 2rem;
 }
 .main-navigation ul {
-	display: none;
+	display: flex;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 	height: 0;
+	opacity: 0;
 }
 .main-navigation ul a {
 	text-decoration: none;
-	color: inherit;
+	color: white;
+	font-weight: 700;
 }
 .main-navigation ul a:hover, .main-navigation ul a:focus {
 	text-decoration: none;
@@ -734,22 +744,39 @@ textarea {
 	flex-direction: column;
 	gap: 1rem;
 	height: auto;
-	background-color: white;
+	opacity: 1;
 	background: none;
 	color: inherit;
 	border: none;
-	padding: 0;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+	padding: 1rem;
+	transition: opacity 1s ease-in-out;
+}
+
+.main-navigation.toggled ul {
+	background-color: #a6182e;
 }
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
+	.main-navigation {
+		position: static;
+	}
 	.desktop-title {
 		display: block;
+		padding: 0 1rem;
+		margin: 0;
+		font-size: 1.5em;
+		color: rgb(62, 62, 62);
+		font-family: "Playfair Display", serif;
+	}
+	.desktop-title a {
+		text-decoration: none;
+		color: inherit;
 	}
 	.main-navigation ul {
 		display: flex;
@@ -758,17 +785,28 @@ textarea {
 		align-items: center;
 		height: auto;
 		position: relative;
-		font-size: 1rem;
+		font-size: 1.1rem;
 		background-color: #fff;
+		opacity: 1;
+	}
+	.main-navigation ul a {
+		color: black;
+		font-weight: 400;
+	}
+	.menu-menu-1-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: static;
+	}
+	.menu-menu-1-container .sub-menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+		padding: 1rem;
 	}
 }
-.menu-menu-1-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: relative;
-}
-
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -832,28 +870,58 @@ textarea {
 }
 
 .schedule-table {
-	display: flex;
-	justify-content: center;
+	font-weight: bold;
+	border-collapse: collapse;
+	max-width: 62.5rem;
+	margin: 0 auto 8rem;
+}
+.schedule-table caption {
 	padding: 1rem;
+	font-size: 1.25rem;
 }
 .schedule-table thead {
-	width: 100%;
+	background-color: #eee;
 }
-.schedule-table thead tr {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	width: 100%;
+.schedule-table tbody tr:nth-of-type(odd) {
+	background-color: #a00529;
+	color: white;
 }
-.schedule-table thead tr td {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.schedule-table tbody tr:nth-of-type(even) {
+	background-color: #eee;
+}
+.schedule-table tr {
+	display: grid;
+	padding: 2rem;
+	grid-template-columns: auto;
+	grid-template-areas: "date date" "course instructor";
 	text-align: center;
-	width: 33%;
-	height: 5rem;
-	padding: 0 1rem;
-	border: 1px solid #000;
+}
+.schedule-table tr :nth-child(1) {
+	grid-area: date;
+}
+.schedule-table tr :nth-child(2) {
+	grid-area: course;
+}
+.schedule-table tr :nth-child(3) {
+	grid-area: instructor;
+}
+.schedule-table td {
+	display: block;
+	padding: 1rem;
+}
+.schedule-table th {
+	display: block;
+	padding: 1rem;
+}
+@media (min-width: 40.625em) {
+	.schedule-table tr {
+		display: table-row;
+	}
+	.schedule-table th,
+	.schedule-table td {
+		display: table-cell;
+		padding: 2rem;
+	}
 }
 
 .page-id-85 {
@@ -1077,12 +1145,12 @@ textarea {
 	text-align: center;
 	padding: 1rem 0;
 }
-.site-footer .menu {
+.site-footer .menu ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-.site-footer .menu a {
+.site-footer .menu ul a {
 	color: #cc0633;
 }
 .site-footer .site-info,
