@@ -37,7 +37,8 @@
 				<?php
 				else :
 				?>
-					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
+					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home" class="custom-logo"><?php get_template_part("icons/graduation-cap-solid") ?></a></p>
+					<h2 class="desktop-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name') ?> </a> </h2>
 				<?php
 				endif;
 				$school_theme_description = get_bloginfo('description', 'display');
