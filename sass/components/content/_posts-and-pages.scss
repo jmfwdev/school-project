@@ -65,3 +65,150 @@
     }
   }
 }
+
+
+// homepage **** //
+
+.page-id-85 {
+	margin: 0;
+	.post-85 {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-areas: 
+				"thumbnail"
+				"header"
+				"content"
+				"footer";
+	
+		.entry-header {
+			grid-area: header;
+		}
+	
+		.post-thumbnail {
+			grid-area: thumbnail;
+			img {
+				display: block;
+			}
+		}
+	
+	
+		.entry-content p:nth-child(1) {
+			margin: 0;
+			background-color: #cc0633;
+			color: white;
+			padding: 0 1rem 1rem;
+		}
+	
+		.entry-content p:nth-child(2) {
+			margin: 1rem auto;
+			padding: 1rem;
+			background-color: rgba(231, 231, 231, 0.500);
+			max-width: 62.5rem;
+		}
+
+		.entry-content :nth-child(5) {
+			padding: 1rem;
+			margin: 0.5rem auto;
+			max-width: 62.5rem;
+		}
+
+		.entry-content {
+			grid-area: content;
+			margin: 0;
+
+			.wp-block-image img{
+				display: block;
+				margin: 0.5rem auto;
+			}
+
+			.wp-block-columns {
+				max-width: 65rem;
+				margin: 0 auto;
+
+				p {
+					background-color: white;
+					font-size: large;
+				}
+			}
+		}
+	
+		.entry-footer {
+			grid-area: footer;
+		}
+	}
+
+	.home-blog {
+
+		h2 {
+			text-align: center;
+			font-size: 35px;
+		}
+
+		.latest-blog {
+
+			article {
+				margin: 2rem;
+				border: 1px solid #e6e7e8;
+
+				a {
+					text-decoration: none;
+				}
+
+				h3 {
+					font-size: 25px;
+					padding: 0 0.75rem 0;
+					color: rgb(78, 78, 78);
+					margin-top: 0;
+				}
+
+				p {
+					font-size: 10px;
+					width: 100%;
+					font-weight: bold;
+					color: #cc0633;
+					margin: 0 1rem 1rem;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 48.75em) {
+		.latest-blog {
+			display: flex;
+		}
+	}
+
+	@media (min-width: 56.25em) {
+		.post-85 {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.entry-header {
+			position: absolute;
+			z-index: 1;
+			top: 26rem;
+
+			h1 {
+				font-weight: bolder;
+			}
+		}
+
+		.post-thumbnail {
+			position: relative;
+		}
+
+		.post-85 .entry-content p:nth-child(1) {
+			margin: 0;
+			background-color: white;
+			padding: 1rem;
+			position: absolute;
+			top: 33rem;
+			left: 3rem;
+			width: 20rem;
+			color: black;
+		}
+	}
+}
+
+// **** //

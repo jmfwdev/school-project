@@ -1,0 +1,24 @@
+.site-footer {
+    background-color: rgb(229, 226, 226);
+    text-align: center;
+    padding: 1rem 0;
+
+    .menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        a {
+            color: #cc0633;
+        }
+    }
+
+    .site-info,
+    .site-credits,
+    .menu {
+        margin: 1rem auto;
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+}
