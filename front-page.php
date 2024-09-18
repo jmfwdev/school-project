@@ -25,7 +25,7 @@ get_header();
 		get_template_part('template-parts/content', 'page'); ?>
 
 		<section class="home-blog">
-			<h2><?php esc_html_e('Latest Blog Posts', 'fwd') ?></h2>
+			<h2><?php esc_html_e('Recent News', 'fwd') ?></h2>
 			<?php
 
 			$args = array(
@@ -54,6 +54,9 @@ get_header();
 								the_title();
 								?>
 							</h3>
+							<p>
+								READ MORE ->
+							</p>
 						</a>
 					</article>
 			<?php

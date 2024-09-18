@@ -20,6 +20,9 @@
 			&
 			<a href="#">JM Hore</a>
 		</p>
+		<p>
+			Inspiration from <a href="">SFU School Website</a>
+		</p>
 	</div>
 	<nav id="footer-navigation" class="footer-navigation">
 		<h2>LINKS</h2>
