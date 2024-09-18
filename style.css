@@ -405,6 +405,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+	margin: 1rem;
 }
 
 .page-id-85 h1 {
@@ -471,6 +472,10 @@ big {
 --------------------------------------------- */
 body {
 	background: #fff;
+}
+
+.page-title {
+	text-align: center;
 }
 
 hr {
@@ -639,6 +644,7 @@ textarea {
 	align-content: center;
 	position: relative;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	z-index: 999;
 }
 #masthead .site-branding {
 	display: flex;
@@ -1032,6 +1038,30 @@ textarea {
 		width: 20rem;
 		color: black;
 	}
+}
+
+#news-title {
+	text-align: center;
+}
+
+.aos-init {
+	margin: 0 auto;
+	max-width: 50rem;
+	padding: 2rem;
+}
+.aos-init .entry-header h2 {
+	margin: 0 0 1.5em;
+}
+.aos-init .entry-header h2 a {
+	color: #000000;
+	text-decoration: none;
+	font-size: 1.5rem;
+	text-align: left;
+}
+.aos-init .entry-header .entry-meta a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #cc0633;
 }
 
 /* Comments
