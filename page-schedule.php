@@ -31,27 +31,52 @@ get_header();
 
 			if ($course_schedule) {
 
-				foreach ($course_schedule as $schedule_item) {
+	?>
 
-					$schedule_date = $schedule_item['date'];
-					$schedule_course = $schedule_item['course'];
-					$schedule_instructor = $schedule_item['instructors'];
+				<table class="schedule-table">
+					<caption>Weekly Course Schedule</caption>
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Course</th>
+							<th>Instructor</th>
+						</tr>
+					</thead>
 
-					echo '<table class="schedule-table">';
-					echo '<thead>';
+					<tbody>
+
+						<?php
+
+						foreach ($course_schedule as $schedule_item) {
+
+							$schedule_date = $schedule_item['date'];
+							$schedule_course = $schedule_item['course'];
+							$schedule_instructor = $schedule_item['instructors'];
+
+							echo '<tr>';
+							echo '<td>';
+							echo $schedule_date;
+							echo '</td>';
+
+							echo '<td>';
+							echo $schedule_course;
+							echo '</td>';
+
+							echo '<td>';
+							echo $schedule_instructor;
+							echo '</td>';
+							echo '</tr>';
+
+						?>
 
 
-					echo '<tr>';
-					echo '<td>' . $schedule_course . '</td>';
-					echo '<td>' . $schedule_date . '</td>';
-					echo '<td>' . $schedule_instructor . '</td>';
-					echo '</tr>';
+						<?php
+						}
+						?>
+					</tbody>
 
-
-					echo '</thead>';
-					echo '</tbody>';
-					echo '</table>';
-				}
+				</table>
+	<?php
 			}
 		}
 
