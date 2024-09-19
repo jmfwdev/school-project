@@ -18,7 +18,7 @@ get_header();
 	</div>
 
 	<div class="related-students">
-		<h2>Related Students</h2>
+		<h2>Related Students: </h2>
 		<?php
 		$terms = get_the_terms(get_the_ID(), 'student_category');
 		if ($terms) {

@@ -1026,6 +1026,11 @@ textarea {
 		flex-direction: column;
 		margin: 1rem;
 	}
+	.related-students {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
 	h1 {
 		text-align: center;
 	}
