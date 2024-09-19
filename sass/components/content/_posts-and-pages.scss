@@ -474,3 +474,89 @@
     }
   }
 }
+
+.entry-footer {
+  margin: 0 0 1.5em;
+  .cat-links {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #cc0633;
+    }
+  }
+
+  .tag-links {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #cc0633;
+    }
+  }
+
+  .comments-link {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #cc0633;
+    }
+  }
+}
+
+// Student Taxonomy Archive
+
+.student-taxonomy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.student-taxonomy .student {
+  flex: 1;
+  margin: 1rem;
+  padding: 1.5em;
+  border: 1px solid #e6e7e8;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  height: 100%;
+  max-height: 70rem;
+  h2 {
+    margin: 0 0 1.5em;
+    a {
+      color: #cc0633;
+      text-decoration: none;
+    }
+  }
+  .student-image {
+    margin: 0 0 1.5em;
+    img {
+      display: block;
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+    }
+  }
+
+  .excerpt {
+    text-wrap: balance;
+  }
+}
+
+@media screen and (min-width: 37.5em) {
+  .student-list {
+    flex-direction: row;
+    margin: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .student-taxonomy .student {
+    flex: 1 0 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 30%;
+  }
+}
