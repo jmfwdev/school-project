@@ -419,7 +419,88 @@
 // single news post
 
 .single-post {
-  
+
+  .site-main {
+    margin: auto 0.5rem;
+  }
+
+   h1 {
+      text-align: center;
+   }
+
+   a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #cc0633;
+   }
+
+   .entry-meta{
+    margin: 1rem;
+    text-align: center;
+   }
+
+   article {
+    margin: 5rem auto;
+    max-width: 62.5rem;
+   }
+
+   .comments-area {
+    margin: 3rem auto;
+    box-shadow: 1px 1px 5px black;
+    padding: 1rem;
+    max-width: 50.75rem;
+    display: flex;
+   }
+
+   .entry-content .wp-block-image img{
+    margin: 1.5rem auto;
+    display: block;
+   }
+
+   .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 2.5rem;
+
+    .nav-previous,
+    .nav-next {
+      margin: 0.25rem;
+      width: 100%;
+    }
+
+    @media (min-width:50.75em) {
+      .site-main {
+        margin: unset;
+      }
+    }
+   }
+
+   // custom style for single post(s)
+
+   .post-53 {
+
+      .entry-content .wp-block-pullquote blockquote{
+
+        p {
+          text-decoration: underline;
+        }
+
+        cite {
+          font-weight: bold;
+        }
+      }
+
+      .wp-block-button {
+        a {
+          color: white;
+        }
+
+        a:hover {
+          color: black;
+          background-color: #eee;
+        }
+      }
+   }
 }
 
 

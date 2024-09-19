@@ -1252,6 +1252,65 @@ textarea {
 	}
 }
 
+.single-post .site-main {
+	margin: auto 0.5rem;
+}
+.single-post h1 {
+	text-align: center;
+}
+.single-post a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #cc0633;
+}
+.single-post .entry-meta {
+	margin: 1rem;
+	text-align: center;
+}
+.single-post article {
+	margin: 5rem auto;
+	max-width: 62.5rem;
+}
+.single-post .comments-area {
+	margin: 3rem auto;
+	box-shadow: 1px 1px 5px black;
+	padding: 1rem;
+	max-width: 50.75rem;
+	display: flex;
+}
+.single-post .entry-content .wp-block-image img {
+	margin: 1.5rem auto;
+	display: block;
+}
+.single-post .nav-links {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 1rem 2.5rem;
+}
+.single-post .nav-links .nav-previous,
+.single-post .nav-links .nav-next {
+	margin: 0.25rem;
+	width: 100%;
+}
+@media (min-width: 50.75em) {
+	.single-post .nav-links .site-main {
+		margin: unset;
+	}
+}
+.single-post .post-53 .entry-content .wp-block-pullquote blockquote p {
+	text-decoration: underline;
+}
+.single-post .post-53 .entry-content .wp-block-pullquote blockquote cite {
+	font-weight: bold;
+}
+.single-post .post-53 .wp-block-button a {
+	color: white;
+}
+.single-post .post-53 .wp-block-button a:hover {
+	color: black;
+	background-color: #eee;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {
@@ -1363,12 +1422,12 @@ textarea {
 	text-align: center;
 	padding: 1rem 0;
 }
-.site-footer .menu ul {
+.site-footer ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-.site-footer .menu ul a {
+.site-footer ul a {
 	color: #cc0633;
 }
 .site-footer .site-info,
