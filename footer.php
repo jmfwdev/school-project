@@ -13,6 +13,13 @@
 ?>
 
 <footer id="colophon" class="site-footer">
+	<div class="site-footer-logo">
+		<?php
+
+		get_template_part("icons/graduation-cap-solid")
+
+		?>
+	</div>
 	<div class="site-credits">
 		<h2>CREDITS</h2>
 		<p>Created by:
