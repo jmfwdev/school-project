@@ -50,7 +50,15 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Menu', 'school-theme'); ?></button>
+				<input type="checkbox" id="checkbox2" class="checkbox2 visuallyHidden menu-toggle">
+				<label for="checkbox2">
+					<div class="hamburger hamburger2">
+						<span class="bar bar1"></span>
+						<span class="bar bar2"></span>
+						<span class="bar bar3"></span>
+						<span class="bar bar4"></span>
+					</div>
+				</label>
 				<?php
 				wp_nav_menu(
 					array(

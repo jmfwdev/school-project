@@ -6,6 +6,17 @@
  */
 (function () {
   const siteNavigation = document.getElementById("site-navigation");
+  const newHamburger = document.getElementById("checkbox2");
+
+  //   Hamburger 2 Event Listener
+
+  newHamburger.addEventListener("click", function () {
+    if (newHamburger.checked) {
+      siteNavigation.classList.add("toggled");
+    } else {
+      siteNavigation.classList.remove("toggled");
+    }
+  });
 
   // Return early if the navigation doesn't exist.
   if (!siteNavigation) {
