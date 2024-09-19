@@ -333,7 +333,7 @@ function add_student_categories()
 }
 add_action('init', 'add_student_categories');
 
-add_image_size('student-featured', 800, 600, true);
+add_image_size('student-featured', 200, 300, true);
 
 function enqueue_aos_library()
 {
