@@ -30,12 +30,130 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  flex-direction: column;
 }
 
 .student-list .student {
-  flex: 1 0 100%;
-  margin: 0 0 1.5em;
-  max-width: 33%;
+  flex: 1;
+  margin: 1rem;
+  padding: 1.5em;
+  border: 1px solid #e6e7e8;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  h2 {
+    margin: 0 0 1.5em;
+    a {
+      color: #cc0633;
+      text-decoration: none;
+    }
+  }
+  .student-image {
+    margin: 0 0 1.5em;
+    img {
+      display: block;
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+    }
+  }
+
+  .excerpt {
+    text-wrap: balance;
+  }
+}
+
+@media screen and (min-width: 37.5em) {
+  .student-list {
+    flex-direction: row;
+    margin: 1rem;
+  }
+
+  .student-list .student {
+    flex: 1 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 30%;
+  }
+}
+
+// Student Individual Page
+
+.content-wrap-single-student {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+  .student-image {
+    margin: 0 0 1.5em;
+    img {
+      display: block;
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+    }
+    .student-info {
+      flex: 1;
+      margin: 1rem;
+      padding: 1.5em;
+      border: 1px solid #e6e7e8;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+        rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      h2 {
+        margin: 0 0 1.5em;
+        a {
+          color: #cc0633;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 62.5rem) {
+  .content-wrap-single-student {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .img-content-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
+    align-items: flex-start;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+    }
+    .student-content {
+      flex: 1;
+      align-content: flex-start;
+      max-width: 50rem;
+      height: 20rem;
+      padding: 1.5em;
+      border: 1px solid #e6e7e8;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+        rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      h2 {
+        margin: 0 0 1.5em;
+        a {
+          color: #cc0633;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 // Schedule
@@ -329,143 +447,138 @@
 
 .blog,
 .single-post {
-
-
-#news-title {
-  text-align: center;
-}
-
-.aos-init {
-  margin: 0 auto;
-  max-width: 50rem;
-  padding: 2rem;
-
-  .entry-header {
-    h2 {
-      margin: 0 0 1.5em;
-      a {
-        color: #000000;
-        text-decoration: none;
-        font-size: 1.5rem;
-        text-align: left;
-      }
-    }
-
-    .entry-meta {
-      a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #cc0633;
-      }
-    }
-  }
-
-  .entry-footer a {
-    text-decoration: none;
-    color: #cc0633;
-    font-weight: bold;
-  }
-}
-
-
-// sidebar
-.widget-area {
-  height: 50rem;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  max-width: 71.875rem;
-
-  section {
-    margin: 1rem 0;
-  }
-
-  .wp-block-latest-posts {
-    margin: 0;
+  #news-title {
     text-align: center;
-    
-    li a {
+  }
+
+  .aos-init {
+    margin: 0 auto;
+    max-width: 50rem;
+    padding: 2rem;
+
+    .entry-header {
+      h2 {
+        margin: 0 0 1.5em;
+        a {
+          color: #000000;
+          text-decoration: none;
+          font-size: 1.5rem;
+          text-align: left;
+        }
+      }
+
+      .entry-meta {
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          color: #cc0633;
+        }
+      }
+    }
+
+    .entry-footer a {
       text-decoration: none;
-      font-weight: bold;
       color: #cc0633;
+      font-weight: bold;
     }
   }
 
-  .wp-block-categories {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  // sidebar
+  .widget-area {
+    height: 50rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 71.875rem;
 
-    li {
-      list-style-type: none;
-      a {
+    section {
+      margin: 1rem 0;
+    }
+
+    .wp-block-latest-posts {
+      margin: 0;
+      text-align: center;
+
+      li a {
         text-decoration: none;
         font-weight: bold;
         color: #cc0633;
       }
     }
+
+    .wp-block-categories {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      li {
+        list-style-type: none;
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          color: #cc0633;
+        }
+      }
+    }
+
+    .wp-block-calendar {
+      margin: 0;
+    }
   }
-  
-  .wp-block-calendar {
-    margin: 0;
-  }
-}
 
   @media (min-width: 62.5em) {
-
-  .widget-area {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 1rem auto;
-    flex-direction: row;
-    height: auto;
-    align-items: unset;
+    .widget-area {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 1rem auto;
+      flex-direction: row;
+      height: auto;
+      align-items: unset;
+    }
   }
-}
 }
 
 // single news post
 
 .single-post {
-
   .site-main {
     margin: auto 0.5rem;
   }
 
-   h1 {
-      text-align: center;
-   }
+  h1 {
+    text-align: center;
+  }
 
-   a {
+  a {
     text-decoration: none;
     font-weight: bold;
     color: #cc0633;
-   }
+  }
 
-   .entry-meta{
+  .entry-meta {
     margin: 1rem;
     text-align: center;
-   }
+  }
 
-   article {
+  article {
     margin: 5rem auto;
     max-width: 62.5rem;
-   }
+  }
 
-   .comments-area {
+  .comments-area {
     margin: 3rem auto;
     box-shadow: 1px 1px 5px black;
     padding: 1rem;
     max-width: 50.75rem;
     display: flex;
-   }
+  }
 
-   .entry-content .wp-block-image img{
+  .entry-content .wp-block-image img {
     margin: 1.5rem auto;
     display: block;
-   }
+  }
 
-   .nav-links {
+  .nav-links {
     display: flex;
     justify-content: space-evenly;
     margin: 1rem 2.5rem;
@@ -476,43 +589,121 @@
       width: 100%;
     }
 
-    @media (min-width:50.75em) {
+    @media (min-width: 50.75em) {
       .site-main {
         margin: unset;
       }
     }
-   }
+  }
 
-   // custom style for single post(s)
+  // custom style for single post(s)
 
-   .post-53 {
-
-      .entry-content .wp-block-pullquote blockquote{
-
-        p {
-          text-decoration: underline;
-        }
-
-        cite {
-          font-weight: bold;
-        }
+  .post-53 {
+    .entry-content .wp-block-pullquote blockquote {
+      p {
+        text-decoration: underline;
       }
 
-      .wp-block-button {
-        a {
-          color: white;
-        }
-
-        a:hover {
-          color: black;
-          background-color: #eee;
-        }
+      cite {
+        font-weight: bold;
       }
-   }
+    }
+
+    .wp-block-button {
+      a {
+        color: white;
+      }
+
+      a:hover {
+        color: black;
+        background-color: #eee;
+      }
+    }
+  }
 }
 
+.entry-footer {
+  margin: 0 0 1.5em;
+  .cat-links {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #cc0633;
+    }
+  }
 
+  .tag-links {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #cc0633;
+    }
+  }
 
+  .comments-link {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #cc0633;
+    }
+  }
+}
 
+// Student Taxonomy Archive
 
+.student-taxonomy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: flex-start;
+}
 
+.student-taxonomy .student {
+  flex: 1;
+  margin: 1rem;
+  padding: 1.5em;
+  border: 1px solid #e6e7e8;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  height: 100%;
+  max-height: 70rem;
+  h2 {
+    margin: 0 0 1.5em;
+    a {
+      color: #cc0633;
+      text-decoration: none;
+    }
+  }
+  .student-image {
+    margin: 0 0 1.5em;
+    img {
+      display: block;
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+    }
+  }
+
+  .excerpt {
+    text-wrap: balance;
+  }
+}
+
+@media screen and (min-width: 37.5em) {
+  .student-list {
+    flex-direction: row;
+    margin: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .student-taxonomy .student {
+    flex: 1 0 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 30%;
+  }
+}
