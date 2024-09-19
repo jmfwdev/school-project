@@ -1170,28 +1170,151 @@ textarea {
 	}
 }
 
-#news-title {
+.blog #news-title,
+.single-post #news-title {
 	text-align: center;
 }
-
-.aos-init {
+.blog .aos-init,
+.single-post .aos-init {
 	margin: 0 auto;
 	max-width: 50rem;
 	padding: 2rem;
 }
-.aos-init .entry-header h2 {
+.blog .aos-init .entry-header h2,
+.single-post .aos-init .entry-header h2 {
 	margin: 0 0 1.5em;
 }
-.aos-init .entry-header h2 a {
+.blog .aos-init .entry-header h2 a,
+.single-post .aos-init .entry-header h2 a {
 	color: #000000;
 	text-decoration: none;
 	font-size: 1.5rem;
 	text-align: left;
 }
-.aos-init .entry-header .entry-meta a {
+.blog .aos-init .entry-header .entry-meta a,
+.single-post .aos-init .entry-header .entry-meta a {
 	text-decoration: none;
 	font-weight: bold;
 	color: #cc0633;
+}
+.blog .aos-init .entry-footer a,
+.single-post .aos-init .entry-footer a {
+	text-decoration: none;
+	color: #cc0633;
+	font-weight: bold;
+}
+.blog .widget-area,
+.single-post .widget-area {
+	height: 50rem;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	max-width: 71.875rem;
+}
+.blog .widget-area section,
+.single-post .widget-area section {
+	margin: 1rem 0;
+}
+.blog .widget-area .wp-block-latest-posts,
+.single-post .widget-area .wp-block-latest-posts {
+	margin: 0;
+	text-align: center;
+}
+.blog .widget-area .wp-block-latest-posts li a,
+.single-post .widget-area .wp-block-latest-posts li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #cc0633;
+}
+.blog .widget-area .wp-block-categories,
+.single-post .widget-area .wp-block-categories {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.blog .widget-area .wp-block-categories li,
+.single-post .widget-area .wp-block-categories li {
+	list-style-type: none;
+}
+.blog .widget-area .wp-block-categories li a,
+.single-post .widget-area .wp-block-categories li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #cc0633;
+}
+.blog .widget-area .wp-block-calendar,
+.single-post .widget-area .wp-block-calendar {
+	margin: 0;
+}
+@media (min-width: 62.5em) {
+	.blog .widget-area,
+	.single-post .widget-area {
+		display: flex;
+		justify-content: space-evenly;
+		margin: 1rem auto;
+		flex-direction: row;
+		height: auto;
+		align-items: unset;
+	}
+}
+
+.single-post .site-main {
+	margin: auto 0.5rem;
+}
+.single-post h1 {
+	text-align: center;
+}
+.single-post a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #cc0633;
+}
+.single-post .entry-meta {
+	margin: 1rem;
+	text-align: center;
+}
+.single-post article {
+	margin: 5rem auto;
+	max-width: 62.5rem;
+}
+.single-post .comments-area {
+	margin: 3rem auto;
+	box-shadow: 1px 1px 5px black;
+	padding: 1rem;
+	max-width: 50.75rem;
+	display: flex;
+}
+.single-post .entry-content .wp-block-image img {
+	margin: 1.5rem auto;
+	display: block;
+}
+.single-post .nav-links {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 1rem 2.5rem;
+}
+.single-post .nav-links .nav-previous,
+.single-post .nav-links .nav-next {
+	margin: 0.25rem;
+	width: 100%;
+}
+@media (min-width: 50.75em) {
+	.single-post .nav-links .site-main {
+		margin: unset;
+	}
+}
+.single-post .post-53 .entry-content .wp-block-pullquote blockquote p {
+	text-decoration: underline;
+}
+.single-post .post-53 .entry-content .wp-block-pullquote blockquote cite {
+	font-weight: bold;
+}
+.single-post .post-53 .wp-block-button a {
+	color: white;
+}
+.single-post .post-53 .wp-block-button a:hover {
+	color: black;
+	background-color: #eee;
 }
 
 /* Comments
@@ -1305,12 +1428,12 @@ textarea {
 	text-align: center;
 	padding: 1rem 0;
 }
-.site-footer .menu ul {
+.site-footer ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-.site-footer .menu ul a {
+.site-footer ul a {
 	color: #cc0633;
 }
 .site-footer .site-info,

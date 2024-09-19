@@ -327,6 +327,10 @@
 
 // News Page
 
+.blog,
+.single-post {
+
+
 #news-title {
   text-align: center;
 }
@@ -355,4 +359,160 @@
       }
     }
   }
+
+  .entry-footer a {
+    text-decoration: none;
+    color: #cc0633;
+    font-weight: bold;
+  }
 }
+
+
+// sidebar
+.widget-area {
+  height: 50rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 71.875rem;
+
+  section {
+    margin: 1rem 0;
+  }
+
+  .wp-block-latest-posts {
+    margin: 0;
+    text-align: center;
+    
+    li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #cc0633;
+    }
+  }
+
+  .wp-block-categories {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    li {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #cc0633;
+      }
+    }
+  }
+  
+  .wp-block-calendar {
+    margin: 0;
+  }
+}
+
+  @media (min-width: 62.5em) {
+
+  .widget-area {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem auto;
+    flex-direction: row;
+    height: auto;
+    align-items: unset;
+  }
+}
+}
+
+// single news post
+
+.single-post {
+
+  .site-main {
+    margin: auto 0.5rem;
+  }
+
+   h1 {
+      text-align: center;
+   }
+
+   a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #cc0633;
+   }
+
+   .entry-meta{
+    margin: 1rem;
+    text-align: center;
+   }
+
+   article {
+    margin: 5rem auto;
+    max-width: 62.5rem;
+   }
+
+   .comments-area {
+    margin: 3rem auto;
+    box-shadow: 1px 1px 5px black;
+    padding: 1rem;
+    max-width: 50.75rem;
+    display: flex;
+   }
+
+   .entry-content .wp-block-image img{
+    margin: 1.5rem auto;
+    display: block;
+   }
+
+   .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 2.5rem;
+
+    .nav-previous,
+    .nav-next {
+      margin: 0.25rem;
+      width: 100%;
+    }
+
+    @media (min-width:50.75em) {
+      .site-main {
+        margin: unset;
+      }
+    }
+   }
+
+   // custom style for single post(s)
+
+   .post-53 {
+
+      .entry-content .wp-block-pullquote blockquote{
+
+        p {
+          text-decoration: underline;
+        }
+
+        cite {
+          font-weight: bold;
+        }
+      }
+
+      .wp-block-button {
+        a {
+          color: white;
+        }
+
+        a:hover {
+          color: black;
+          background-color: #eee;
+        }
+      }
+   }
+}
+
+
+
+
+
+
