@@ -53,18 +53,6 @@
     }
   });
 
-  if (window.innerWidth >= 600) {
-    // Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
-    document.addEventListener("click", function (event) {
-      const isClickInside = siteNavigation.contains(event.target);
-
-      if (!isClickInside) {
-        siteNavigation.classList.remove("toggled");
-        button.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
   // Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
   document.addEventListener("click", function (event) {
     const isClickInside = siteNavigation.contains(event.target);
@@ -122,3 +110,21 @@
     }
   }
 })();
+
+const siteNavigation = document.getElementById("site-navigation");
+
+function checkBreakpoint() {
+  // Check if the 'toggled' class is present and if the window width is 600px or more
+  if (
+    siteNavigation.classList.contains("toggled") &&
+    window.innerWidth >= 600
+  ) {
+    siteNavigation.classList.remove("toggled");
+  }
+}
+
+// Initial check
+checkBreakpoint();
+
+// Add event listener for window resize
+window.addEventListener("resize", checkBreakpoint);
