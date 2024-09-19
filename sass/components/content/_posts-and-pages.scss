@@ -359,8 +359,16 @@
       }
     }
   }
+
+  .entry-footer a {
+    text-decoration: none;
+    color: #cc0633;
+    font-weight: bold;
+  }
 }
 
+
+// sidebar
 .widget-area {
   height: 50rem;
   align-items: center;

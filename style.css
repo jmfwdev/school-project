@@ -1197,6 +1197,12 @@ textarea {
 	font-weight: bold;
 	color: #cc0633;
 }
+.blog .aos-init .entry-footer a,
+.single-post .aos-init .entry-footer a {
+	text-decoration: none;
+	color: #cc0633;
+	font-weight: bold;
+}
 .blog .widget-area,
 .single-post .widget-area {
 	height: 50rem;
