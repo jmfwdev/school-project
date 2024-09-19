@@ -6,12 +6,15 @@ get_header();
 	<div class="content-wrap-single-student">
 
 		<h1><?php the_title(); ?></h1>
-		<div class="student-image">
-			<?php the_post_thumbnail('student-thumbnail'); ?>
+		<div class="img-content-wrap">
+			<div class="student-image">
+				<?php the_post_thumbnail('student-thumbnail'); ?>
+			</div>
+			<div class="student-content">
+				<?php the_content(); ?>
+			</div>
 		</div>
-		<div class="student-content">
-			<?php the_content(); ?>
-		</div>
+
 	</div>
 
 	<div class="related-students">
