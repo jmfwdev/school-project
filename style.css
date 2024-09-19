@@ -1170,28 +1170,86 @@ textarea {
 	}
 }
 
-#news-title {
+.blog #news-title,
+.single-post #news-title {
 	text-align: center;
 }
-
-.aos-init {
+.blog .aos-init,
+.single-post .aos-init {
 	margin: 0 auto;
 	max-width: 50rem;
 	padding: 2rem;
 }
-.aos-init .entry-header h2 {
+.blog .aos-init .entry-header h2,
+.single-post .aos-init .entry-header h2 {
 	margin: 0 0 1.5em;
 }
-.aos-init .entry-header h2 a {
+.blog .aos-init .entry-header h2 a,
+.single-post .aos-init .entry-header h2 a {
 	color: #000000;
 	text-decoration: none;
 	font-size: 1.5rem;
 	text-align: left;
 }
-.aos-init .entry-header .entry-meta a {
+.blog .aos-init .entry-header .entry-meta a,
+.single-post .aos-init .entry-header .entry-meta a {
 	text-decoration: none;
 	font-weight: bold;
 	color: #cc0633;
+}
+.blog .widget-area,
+.single-post .widget-area {
+	height: 50rem;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	max-width: 71.875rem;
+}
+.blog .widget-area section,
+.single-post .widget-area section {
+	margin: 1rem 0;
+}
+.blog .widget-area .wp-block-latest-posts,
+.single-post .widget-area .wp-block-latest-posts {
+	margin: 0;
+	text-align: center;
+}
+.blog .widget-area .wp-block-latest-posts li a,
+.single-post .widget-area .wp-block-latest-posts li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #cc0633;
+}
+.blog .widget-area .wp-block-categories,
+.single-post .widget-area .wp-block-categories {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.blog .widget-area .wp-block-categories li,
+.single-post .widget-area .wp-block-categories li {
+	list-style-type: none;
+}
+.blog .widget-area .wp-block-categories li a,
+.single-post .widget-area .wp-block-categories li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #cc0633;
+}
+.blog .widget-area .wp-block-calendar,
+.single-post .widget-area .wp-block-calendar {
+	margin: 0;
+}
+@media (min-width: 62.5em) {
+	.blog .widget-area,
+	.single-post .widget-area {
+		display: flex;
+		justify-content: space-evenly;
+		margin: 1rem auto;
+		flex-direction: row;
+		height: auto;
+		align-items: unset;
+	}
 }
 
 /* Comments
