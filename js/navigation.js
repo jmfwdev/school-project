@@ -117,7 +117,7 @@ function checkBreakpoint() {
   // Check if the 'toggled' class is present and if the window width is 600px or more
   if (
     siteNavigation.classList.contains("toggled") &&
-    window.innerWidth >= 600
+    window.innerWidth >= 700
   ) {
     siteNavigation.classList.remove("toggled");
   }
