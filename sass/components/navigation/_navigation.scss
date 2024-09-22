@@ -132,7 +132,6 @@
 .main-navigation {
   display: block;
   width: auto;
-
   padding-right: 1rem;
   top: 1.5rem;
   right: 2rem;
@@ -167,7 +166,6 @@
         top: 0;
         background-color: #cc0831;
       }
-
 
       li {
         &:hover > ul,
@@ -305,7 +303,6 @@
       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-      
     }
   }
 }
